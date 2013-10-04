@@ -1,0 +1,11 @@
+  <div id="container">
+    <% @students.each do |student| %>
+      <div class="tweetbox">
+        <div class="username"><%= student.username %></div>
+        <div class="tagline"><%= student.tagline %></div>
+        <% student.tweets.each do |tweet| %>
+        <p class="tweet"><%= tweet.text %></br></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
