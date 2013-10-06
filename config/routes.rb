@@ -1,12 +1,13 @@
 Tweetboard::Application.routes.draw do
 
-  resources :users, :only => [:index, :show] do
+  resources :users do
     resources :tweets, :only => [:index, :show]
   end
 
   root :to => 'static_pages#index'
 
   get 'static_pages/refresh' => 'static_pages#refresh'
+  get 'static_pages/:id/refresh/' => 'static_pages#refresh_user'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

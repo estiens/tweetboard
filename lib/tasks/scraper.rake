@@ -1,12 +1,12 @@
 require 'twitter'
 require 'twitter_getter'
 
-CURRENT_STUDENTS=["bitmakerlabs", "ahmednadar","kim_yee","brianhan87","deepak23verma", "jcarrharris", "Royal_Arse", "chai_shah", "mutualarising", "szuturon", "omarkhafagy", "bmhawkeswood", "northofnormal"]
+# CURRENT_STUDENTS=["bitmakerlabs", "ahmednadar","kim_yee","brianhan87","deepak23verma", "jcarrharris", "Royal_Arse", "chai_shah", "mutualarising", "szuturon", "omarkhafagy", "bmhawkeswood", "northofnormal"]
 
 namespace :data do
   desc "Scrape Users to Database"
   task :scrape_users => :environment do
-    UserScraper.scrape_users
+    TwitterGetter::StudentTwitter.make_users
   end
   desc "Scrape Tweets to Database"
   task :scrape_tweets => :environment do

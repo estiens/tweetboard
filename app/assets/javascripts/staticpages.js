@@ -5,4 +5,8 @@ $(function () {
    itemSelector:'.tweetbox'
   });
 });
+
+$(function(){
+    $('.tweetbox').resizable()
+});
     

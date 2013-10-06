@@ -3,6 +3,12 @@
       <div class="tweetbox">
         <div class="username"><%= student.username %></div>
         <div class="tagline"><%= student.tagline %></div>
+        <i class="icon-mail"></i>
+        <i class="icon-github"></i>
+        <i class="icon-facebook-squared"></i>
+        <i class="icon-twitter"></i>
+        <i class="icon-chart-line"></i>
+        <i class="icon-cw"></i>
         <% student.tweets.each do |tweet| %>
         <p class="tweet"><%= tweet.text %></br></p>
         <% end %>
